@@ -1,0 +1,17 @@
+{
+  "name": "postgres-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "secret",
+    "database.dbname": "postgres",
+    "database.server.name": "172.17.0.1",
+    "table.whitelist": "public.deposit",
+    "plugin.name": "decoderbufs",
+    "slot.name": "deposit_changes"
+  }
+}
+
