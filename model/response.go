@@ -21,22 +21,22 @@ type HitsItem struct {
 }
 
 type DepositHit struct {
-	PaymentMethodCode string  `json:" payment_method_code"`
-	UpdatedBy         string  `json:" updated_by"`
-	Status            string  `json:" status"`
-	Currency          string  `json:" currency"`
-	LoginName         string  `json:" login_name"`
-	GrossAmount       float64 `json:" gross_amount"`
-	NetAmount         float64 `json:" net_amount"`
-	MemberID          int     `json:" member_id"`
-	UpdatedAt         string  `json:" updated_at"`
-	CreatedAt         string  `json:" created_at"`
-	CreatedBy         string  `json:" created_by"`
-	TransactionID     string  `json:" transaction_id"`
-	ChargeAmount      float64 `json:" charge_amount"`
-	RefCode           string  `json:" ref_code"`
-	ID                int     `json:" id"`
-	BankAccountID     int     `json:" bank_account_id"`
+	PaymentMethodCode string  `json:"payment_method_code"`
+	UpdatedBy         string  `json:"updated_by"`
+	Status            int     `json:"status"`
+	Currency          string  `json:"currency"`
+	LoginName         string  `json:"login_name"`
+	GrossAmount       float64 `json:"gross_amount"`
+	NetAmount         float64 `json:"net_amount"`
+	MemberID          int     `json:"member_id"`
+	UpdatedAt         string  `json:"updated_at"`
+	CreatedAt         string  `json:"created_at"`
+	CreatedBy         string  `json:"created_by"`
+	TransactionID     string  `json:"transaction_id"`
+	ChargeAmount      float64 `json:"charge_amount"`
+	RefCode           string  `json:"ref_code"`
+	ID                int     `json:"id"`
+	BankAccountID     int     `json:"bank_account_id"`
 }
 
 type Hits struct {
@@ -46,12 +46,12 @@ type Hits struct {
 }
 
 type Aggregations struct {
-	FilterStatus FilterStatus `json:"filter_status"`
+	FilterStatus FilterStatus `json:"filter_by_status"`
 }
 
 type FilterStatus struct {
 	DocCount        int             `json:"doc_count"`
-	GroupByMemberID GroupByMemberID `json:"groupby_member_id"`
+	GroupByMemberID GroupByMemberID `json:"group_by_member_id"`
 }
 
 type GroupByMemberID struct {

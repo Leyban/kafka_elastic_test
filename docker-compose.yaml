@@ -134,6 +134,8 @@ services:
     container_name: elasticsearch
     ports:
       - 9200:9200
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
     environment:
       ES_JAVA_OPTS: "-Xms1g -Xmx1g"
       discovery.type: "single-node"
@@ -177,3 +179,5 @@ services:
       KAFKA_CLUSTERS_0_KAFKACONNECT_0_ADDRESS: http://kafka-connect:8083
       DYNAMIC_CONFIG_ENABLED: 'true'
 
+volumes:
+  esdata:
